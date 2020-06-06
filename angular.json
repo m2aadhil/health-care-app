@@ -24,9 +24,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/styles/site-specific.css",
+              "src/assets/styles/bootsrap/bootsrap-4.4.1.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/scripts/jquery/jquery-3.4.1.js",
+              "src/assets/scripts/bootsrap/popper.min.js",
+              "src/assets/scripts/bootsrap/bootsrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
