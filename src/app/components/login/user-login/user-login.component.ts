@@ -16,4 +16,8 @@ export class UserLoginComponent implements OnInit {
     this.router.navigate(['profile']);
   }
 
+  register(): void{
+    this.router.navigate(['register/user']);
+  }
+
 }

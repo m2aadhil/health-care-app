@@ -1,16 +1,18 @@
-<form >
-    <h4>Hospital Login</h4>
-  
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-  
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-  
-      <button type="submit" (click)="login()">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-  </form> 
+
+  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-black overflow-hidden">
+  <div class="my-3 py-3">
+  <h2 class="display-5">Hospital Login</h2>
+  <p class="lead">Used By Doctors to View Patient Details</p>
+  </div>  
+  <form>
+      <div class="form-group">
+          <label for="exampleInputEmail1">Patient NIC</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" name="uname">
+      </div>
+      <div class="form-group">
+          <label for="exampleInputPassword1">Patient Pin</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="psw">
+      </div>
+      <button type="submit" (click)="login()" class="btn btn-primary" style="width: 30%;">Login</button>
+  </form>
+</div>

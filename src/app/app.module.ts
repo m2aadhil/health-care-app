@@ -16,6 +16,7 @@ import { DependantRegisterComponent } from './components/register/dependant/depe
 import { UserRegisterComponent } from './components/register/patient-doctor/user-register.component';
 import { SettingsComponent } from './components/profile/settings/settings.component';
 import { AppStateService } from './services/app-state.service';
+import { NewsFeedComponent } from './components/news-feed/news-feed.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AppStateService } from './services/app-state.service';
     MeasurementsComponent,
     DependantRegisterComponent,
     UserRegisterComponent,
-    SettingsComponent
+    SettingsComponent,
+    NewsFeedComponent
   ],
   imports: [
     BrowserModule,
