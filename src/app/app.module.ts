@@ -10,13 +10,14 @@ import { HospitalLoginComponent } from './components/login/hospital-login/hospit
 import { UserLoginComponent } from './components/login/user-login/user-login.component';
 import { RecentLoginsComponent } from './components/login/recent-logins/recent-logins.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { BioInformationComponent } from './components/profile/bio-information/bio-information.component';
-import { MeasurementsComponent } from './components/profile/measurements/measurements.component';
+import { BioInformationComponent } from './components/profile/dashboard/bio-information/bio-information.component';
+import { MeasurementsComponent } from './components/profile/dashboard/measurements/measurements.component';
 import { DependantRegisterComponent } from './components/register/dependant/dependant-register.component';
 import { UserRegisterComponent } from './components/register/patient-doctor/user-register.component';
 import { SettingsComponent } from './components/profile/settings/settings.component';
 import { AppStateService } from './services/app-state.service';
 import { NewsFeedComponent } from './components/news-feed/news-feed.component';
+import { DashboardComponent } from './components/profile/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NewsFeedComponent } from './components/news-feed/news-feed.component';
     DependantRegisterComponent,
     UserRegisterComponent,
     SettingsComponent,
-    NewsFeedComponent
+    NewsFeedComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './components/profile/profile.component';
-import { BioInformationComponent } from './components/profile/bio-information/bio-information.component';
-import { MeasurementsComponent } from './components/profile/measurements/measurements.component';
+import { BioInformationComponent } from './components/profile/dashboard/bio-information/bio-information.component';
+import { MeasurementsComponent } from './components/profile/dashboard/measurements/measurements.component';
 import { UserRegisterComponent } from './components/register/patient-doctor/user-register.component';
 import { DependantRegisterComponent } from './components/register/dependant/dependant-register.component';
 import { SettingsComponent } from './components/profile/settings/settings.component';
 import { HomeComponent } from './components/home/home.component';
+import { DashboardComponent } from './components/profile/dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -16,9 +17,11 @@ const routes: Routes = [
   {
     path: "profile", component: ProfileComponent,
     children: [
+      { path: "", redirectTo: "dashboard", pathMatch: "full" },
+      { path: 'dashboard', component: DashboardComponent },
       { path: 'bio-info', component: BioInformationComponent },
       { path: 'measurements', component: MeasurementsComponent },
-      { path: 'settings', component: SettingsComponent },
+      { path: 'settings', component: SettingsComponent }
     ]
   },
   { path: "register/user", component: UserRegisterComponent, pathMatch: "full" },
