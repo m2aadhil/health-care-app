@@ -18,6 +18,8 @@ import { SettingsComponent } from './components/profile/settings/settings.compon
 import { AppStateService } from './services/app-state.service';
 import { NewsFeedComponent } from './components/news-feed/news-feed.component';
 import { DashboardComponent } from './components/profile/dashboard/dashboard.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { DashboardComponent } from './components/profile/dashboard/dashboard.com
     UserRegisterComponent,
     SettingsComponent,
     NewsFeedComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
