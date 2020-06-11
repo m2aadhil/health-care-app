@@ -20,6 +20,7 @@ import { NewsFeedComponent } from './components/news-feed/news-feed.component';
 import { DashboardComponent } from './components/profile/dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [AppStateService, HttpService],
   bootstrap: [AppComponent]
