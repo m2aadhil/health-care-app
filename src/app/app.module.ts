@@ -21,6 +21,10 @@ import { DashboardComponent } from './components/profile/dashboard/dashboard.com
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { ReportsComponent } from './components/profile/dashboard/reports/reports.component';
+import { VaccinationsComponent } from './components/profile/dashboard/vaccinations/vaccinations.component';
+import { MedicationComponent } from './components/profile/dashboard/medication/medication.component';
+import { CriticalIllnessComponent } from './components/profile/dashboard/critical-illness/critical-illness.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +42,11 @@ import { FormsModule } from '@angular/forms';
     NewsFeedComponent,
     DashboardComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ReportsComponent,
+    VaccinationsComponent,
+    MedicationComponent,
+    CriticalIllnessComponent
   ],
   imports: [
     BrowserModule,

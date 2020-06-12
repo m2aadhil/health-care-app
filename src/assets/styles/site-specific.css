@@ -262,8 +262,7 @@ body {
     transform: translateY(3px);
   }
   
-  button,
-  input {
+  button{
     outline: none !important;
   }
   
@@ -605,11 +604,11 @@ body {
   nav.side-navbar ul {
     padding: 15px 0;
   }
-  
+  /*
   nav.side-navbar ul li {
-    /* submenu item active */
+     submenu item active 
   }
-  
+  */
   nav.side-navbar ul li a {
     padding: 10px 15px;
     text-decoration: none;
@@ -1021,9 +1020,10 @@ body {
   
   /* MAIN NAVBAR MEDIAQUERIES ----------------------------------- */
   @media (max-width: 1199px) {
-    nav.navbar {
-      /*==== Toggle Sidebar Btn ====*/
+    /*nav.navbar {
+      ==== Toggle Sidebar Btn ====
     }
+    */
     nav.navbar .menu-btn {
       margin-right: 20px;
       font-size: 1.2em;
@@ -1776,12 +1776,7 @@ body {
   *     FORMS
   * ==========================================================
   */
-  .form-control {
-    height: calc(2.25rem + 2px);
-    border: 1px solid #dee2e6;
-    border-radius: 0;
-    padding: 0.375rem 0.75rem;
-  }
+
   
   .form-control::-moz-placeholder {
     font-size: 0.9em;
@@ -3837,8 +3832,9 @@ background: #ddd;
 }
 /* Modal styles */
 .modal .modal-dialog {
-max-width: 400px;
+max-width: 900px;
 }
+
 .modal .modal-header, .modal .modal-body, .modal .modal-footer {
 padding: 20px 30px;
 }
@@ -3883,4 +3879,107 @@ border-color: #3FBAE4;
 position: relative;
 top: 2px;
 left: -10px;
+}
+
+
+.modal-body-report{
+  width: 50%;
+}
+
+
+
+
+
+
+.emp-profile{
+  padding: 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+.profile-img{
+  text-align: center;
+}
+.profile-img img{
+  width: 70%;
+  height: 100%;
+}
+.profile-img .file {
+  position: relative;
+  overflow: hidden;
+  margin-top: -20%;
+  width: 70%;
+  border: none;
+  border-radius: 0;
+  font-size: 15px;
+  background: #212529b8;
+}
+.profile-img .file input {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+.profile-head h5{
+  color: #333;
+}
+.profile-head h6{
+  color: #0062cc;
+}
+.profile-edit-btn{
+  border: none;
+  border-radius: 1.5rem;
+  width: 70%;
+  padding: 2%;
+  font-weight: 600;
+  color: #6c757d;
+  cursor: pointer;
+}
+.proile-rating{
+  font-size: 12px;
+  color: #818182;
+  margin-top: 5%;
+}
+.proile-rating span{
+  color: #495057;
+  font-size: 15px;
+  font-weight: 600;
+}
+.profile-head .nav-tabs{
+  margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+  font-weight:600;
+  border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+  border: none;
+  border-bottom:2px solid #0062cc;
+}
+.profile-work{
+  padding: 14%;
+  margin-top: -15%;
+}
+.profile-work p{
+  font-size: 12px;
+  color: #818182;
+  font-weight: 600;
+  margin-top: 10%;
+}
+.profile-work a{
+  text-decoration: none;
+  color: #495057;
+  font-weight: 600;
+  font-size: 14px;
+}
+.profile-work ul{
+  list-style: none;
+}
+.profile-tab label{
+  font-weight: 600;
+}
+.profile-tab p{
+  font-weight: 600;
+  color: #0062cc;
 }

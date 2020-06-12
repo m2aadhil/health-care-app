@@ -4,7 +4,7 @@
           <div class="table-title">
               <div class="row">
                   <div class="col-sm-6">
-                    <h2>Manage Measurements</h2>
+                    <h2>Manage Vaccination</h2>
                   </div>
                   <div class="col-sm-6">
                     <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
@@ -19,7 +19,7 @@
                           <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
                           <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
                         </svg>
-                        Add New Measurement
+                        Add New Vaccination
                       </span>
                     </a>						
                   </div>
@@ -49,22 +49,22 @@
           <table class="table table-striped table-hover">
               <thead>
                   <tr>
-          <th>
-            <span class="custom-checkbox">
-              <input type="checkbox" id="selectAll">
-              <label for="selectAll"></label>
-            </span>
-          </th>
-                      <th>Measurement Type</th>
-                      <th>UOM</th>
-          <th>Value</th>
-                      <th>Date</th>
+                    <th>
+                        <span class="custom-checkbox">
+                        <input type="checkbox" id="selectAll">
+                        <label for="selectAll"></label>
+                        </span>
+                    </th>
+                      <th>Vaccination Name</th>
+                      <th>Date/Time</th>
+                      <th>Continuous/Dosage</th>
                       <th>Note</th>
+                      <th>Attachment</th>
                       <th>Action</th>
                   </tr>
               </thead>
-              <tbody>
-                  <tr>
+    <tbody>
+        <tr>
           <td>
             <span class="custom-checkbox">
               <input type="checkbox" id="checkbox1" name="options[]" value="1">
@@ -73,7 +73,7 @@
           </td>
                       <td>Thomas Hardy</td>
                       <td>thomashardy@mail.com</td>
-          <td>89 Chiaroscuro Rd, Portland, USA</td>
+                      <td>89 Chiaroscuro Rd, Portland, USA</td>
                       <td>(171) 555-2222</td>
                       <td>thomashardy@mail.com</td>
                       <td>
@@ -101,7 +101,7 @@
           </td>
                       <td>Dominique Perrier</td>
                       <td>dominiqueperrier@mail.com</td>
-          <td>Obere Str. 57, Berlin, Germany</td>
+                      <td>Obere Str. 57, Berlin, Germany</td>
                       <td>(313) 555-5735</td>
                       <td>thomashardy@mail.com</td>
                       <td>
@@ -129,7 +129,7 @@
           </td>
                       <td>Maria Anders</td>
                       <td>mariaanders@mail.com</td>
-          <td>25, rue Lauriston, Paris, France</td>
+                      <td>25, rue Lauriston, Paris, France</td>
                       <td>(503) 555-9931</td>
                       <td>thomashardy@mail.com</td>
                       <td>
@@ -157,7 +157,7 @@
           </td>
                       <td>Fran Wilson</td>
                       <td>franwilson@mail.com</td>
-          <td>C/ Araquil, 67, Madrid, Spain</td>
+                      <td>C/ Araquil, 67, Madrid, Spain</td>
                       <td>(204) 619-5731</td>
                       <td>thomashardy@mail.com</td>
                       <td>
@@ -185,7 +185,7 @@
           </td>
                       <td>Martin Blank</td>
                       <td>martinblank@mail.com</td>
-          <td>Via Monte Bianco 34, Turin, Italy</td>
+                      <td>Via Monte Bianco 34, Turin, Italy</td>
                       <td>(480) 631-2097</td>
                       <td>thomashardy@mail.com</td>
                       <td>
@@ -218,40 +218,6 @@
               <li class="page-item"><a href="#" class="page-link">Next</a></li>
           </ul>
       </div>
-
-      <div style="margin-top: 10%;">
-        <h2>Generate Chart</h2>
-        <div class="row my-3">
-          <div class="col-md-4">
-            <label for="validationServer01">Measurement</label>
-            <select class="custom-select" id="validationServer04" name="measurementType" [(ngModel)]="measurementType" (change)="fillUOM()" required>
-              <option selected disabled value="">Choose...</option>
-              <option>Sugar level </option>
-              <option>Blood temperature  </option>
-              <option>Pulse Rate</option>
-              <option>Weight </option>
-              <option>Height </option>
-              <option>Other*</option>
-            </select>
-          </div>
-          <div class="col-md-4">
-            <label for="validationServer02">Date</label>
-            <input type="date" class="form-control" id="validationServer02" required>
-            <br/>
-            <div class="col">
-              <div class="float-right">
-              <button type="button" class="btn btn-primary">View Chart</button>
-              </div> 
-            </div> 
-          </div>
-        </div>
-         
-        <div class="row my-3">
-            <div class="col">
-              <canvas id="canvas" width="100px" height="100px"></canvas>
-            </div>
-        </div>
-      </div>
     </div>
   </div>
 <!-- Edit Modal HTML -->
@@ -260,48 +226,70 @@
     <div class="modal-content">
       <form>
         <div class="modal-header">						
-          <h4 class="modal-title">Add New Measurement</h4>
+          <h4 class="modal-title">Add New Vaccination</h4>
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
-        <div class="modal-body">					
-          <div class="form-group">
-            <label>Measurement Type : </label>
-            <select class="custom-select" id="validationServer04" name="measurementType" [(ngModel)]="measurementType" (change)="fillUOM()" required>
-              <option selected disabled value="">Choose...</option>
-              <option>Sugar level </option>
-              <option>Blood temperature  </option>
-              <option>Pulse Rate</option>
-              <option>Weight </option>
-              <option>Height </option>
-              <option>Other*</option>
-            </select>
-            <!--<input type="text" list="measurement" name="measurementType" [(ngModel)]="measurementType" (change)="fillUOM()" required/>
-           <datalist id="measurement">
-              <option>Sugar level </option>
-              <option>Blood temperature  </option>
-              <option>Pulse Rate</option>
-              <option>Weight </option>
-              <option>Height </option>
-              <option>Other*</option>
-            </datalist> -->
-    
-          </div>
-          <div class="form-group">
-            <label>UOM :</label>
-            <input name="uom" [(ngModel)]="uom" type="text" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label>Value :</label>
-            <input name="value" [(ngModel)]="value" type="text" class="form-control" required>
-          </div>
-          <div class="form-group">
+        <div class="modal-body">
+          <div class="form-row">
+            <div class="col-md-4">
+              <label>Vaccination Name :</label>
+              <input name="reportId" [(ngModel)]="reportId" type="text" class="form-control" required>
+            </div>
+            <div class="col-md-4">
               <label for="validationServer02">Date</label>
               <input type="date" name="date" [(ngModel)]="date" class="form-control" id="validationServer02" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-4">
+              <label>OnTime/Overdue :</label>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" value="">On Time
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" value="">Overdue
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label>Overdue Duration(Days) :</label>
+              <input type="number" name="duration" [(ngModel)]="doctor" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-4">
+              <label>Continuous Dosage: :</label>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" value="">Yes
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" value="">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationServer02">Due Date</label>
+                <input type="date" name="date" [(ngModel)]="date" class="form-control" id="validationServer02" required>
+            </div>
           </div>
           <div class="form-group">
             <label>Note :</label>
-            <textarea name="note" [(ngModel)]="note" class="form-control" required></textarea>
-          </div>					
+            <textarea name="docnote" [(ngModel)]="docnote" class="form-control" required></textarea>
+          </div>
+          <div class="form-group">
+            <div class="custom-file" id="customFile" lang="es">
+              <input type="file" class="custom-file-input" id="exampleInputFile" aria-describedby="fileHelp">
+              <label class="custom-file-label" for="exampleInputFile">
+                 Select file...
+              </label>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -321,34 +309,73 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <div class="modal-body">					
-          <div class="form-group">
-            <label>Measurement Type : </label>
-            <select class="custom-select" id="validationServer04" name="measurementType" [(ngModel)]="measurementType" (change)="fillUOM()" required>
-              <option selected disabled value="">Choose...</option>
-              <option>Sugar level </option>
-              <option>Blood temperature  </option>
-              <option>Pulse Rate</option>
-              <option>Weight </option>
-              <option>Height </option>
-              <option>Other*</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>UOM :</label>
-            <input name="uom" [(ngModel)]="uom" type="text" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label>Value :</label>
-            <input name="value" [(ngModel)]="value" type="text" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label>Date :</label>
-            <input name="date" [(ngModel)]="date" type="date" id="birthday" name="birthday">
-          </div>
-          <div class="form-group">
-            <label>Note :</label>
-            <textarea name="note" [(ngModel)]="note" class="form-control" required></textarea>
-          </div>					
+            <div class="form-group">
+                <label>Report/Doc ID :</label>
+                <input name="reportId" [(ngModel)]="reportId" type="text" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label>Report Title :</label>
+                <input name="reportTitle" [(ngModel)]="reportTitle" type="text" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label>Date/Time :</label>
+                <input name="date" [(ngModel)]="date" type="date" id="birthday" name="birthday">
+              </div>
+              <div class="form-group">
+                <label>Specialization:</label>
+                <input name="specialization" [(ngModel)]="specialization" type="text" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label>Hospital/Provider :</label>
+                <input name="provider" [(ngModel)]="provider" type="text" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label>Doctor :</label>
+                <input name="doctor" [(ngModel)]="doctor" type="text" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label>Result :</label>
+                <input name="result" [(ngModel)]="result" type="text" class="form-control" required>
+              </div>					
+              <div class="form-group">
+                <label>Doctor Note :</label>
+                <textarea name="docnote" [(ngModel)]="docnote" class="form-control" required></textarea>
+              </div>
+              <div class="form-group">
+                <label>Patient Note :</label>
+                <textarea name="patientnote" [(ngModel)]="patientnote" class="form-control" required></textarea>
+              </div>
+              <div class="form-group">
+                <label>Attachment :</label>
+                <textarea name="attachment" [(ngModel)]="attachment" class="form-control" required></textarea>
+              </div>
+              <div class="form-group">
+                <label>Flag : </label>
+                <input name="flag" [(ngModel)]="flag" type="text" class="form-control" required>				
+              </div>
+              <div class="form-group">
+                <label>Cost : </label>
+                <input name="cost" [(ngModel)]="cost" type="text" class="form-control" required>				
+              </div>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <p>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Doctor Details >
+                    </button>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Doctor Identification No/Reg No: </label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Password</label>
+                            <input type="password" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                    </div>
+                </div>
+              </div>					
         </div>
         <div class="modal-footer">
           <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -379,8 +406,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-

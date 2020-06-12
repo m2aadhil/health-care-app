@@ -8,6 +8,10 @@ import { DependantRegisterComponent } from './components/register/dependant/depe
 import { SettingsComponent } from './components/profile/settings/settings.component';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/profile/dashboard/dashboard.component';
+import { ReportsComponent } from './components/profile/dashboard/reports/reports.component';
+import { VaccinationsComponent } from './components/profile/dashboard/vaccinations/vaccinations.component';
+import { MedicationComponent } from './components/profile/dashboard/medication/medication.component';
+import { CriticalIllnessComponent } from './components/profile/dashboard/critical-illness/critical-illness.component';
 
 
 const routes: Routes = [
@@ -21,6 +25,10 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'bio-info', component: BioInformationComponent },
       { path: 'measurements', component: MeasurementsComponent },
+      { path: 'reports', component: ReportsComponent },
+      { path: 'vaccinations', component: VaccinationsComponent },
+      { path: 'medication', component: MedicationComponent },
+      { path: 'illnesses', component: CriticalIllnessComponent },
       { path: 'settings', component: SettingsComponent }
     ]
   },
