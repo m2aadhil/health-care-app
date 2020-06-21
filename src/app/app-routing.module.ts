@@ -1,17 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './components/profile/profile.component';
-import { BioInformationComponent } from './components/profile/dashboard/bio-information/bio-information.component';
-import { MeasurementsComponent } from './components/profile/dashboard/measurements/measurements.component';
+import { BioInformationComponent } from './components/profile/dashboard-patient/bio-information/bio-information.component';
+import { MeasurementsComponent } from './components/profile/dashboard-patient/measurements/measurements.component';
 import { UserRegisterComponent } from './components/register/patient-doctor/user-register.component';
 import { DependantRegisterComponent } from './components/register/dependant/dependant-register.component';
 import { SettingsComponent } from './components/profile/settings/settings.component';
 import { HomeComponent } from './components/home/home.component';
-import { DashboardComponent } from './components/profile/dashboard/dashboard.component';
-import { ReportsComponent } from './components/profile/dashboard/reports/reports.component';
-import { VaccinationsComponent } from './components/profile/dashboard/vaccinations/vaccinations.component';
-import { MedicationComponent } from './components/profile/dashboard/medication/medication.component';
-import { CriticalIllnessComponent } from './components/profile/dashboard/critical-illness/critical-illness.component';
+import { ReportsComponent } from './components/profile/dashboard-patient/reports/reports.component';
+import { VaccinationsComponent } from './components/profile/dashboard-patient/vaccinations/vaccinations.component';
+import { MedicationComponent } from './components/profile/dashboard-patient/medication/medication.component';
+import { CriticalIllnessComponent } from './components/profile/dashboard-patient/critical-illness/critical-illness.component';
+import { DashboardPatientComponent } from './components/profile/dashboard-patient/dashboard-patient.component';
+import { DashboardDoctorComponent } from './components/profile/dashboard-doctor/dashboard-doctor.component';
+import { BioInformationDoctorComponent } from './components/profile/dashboard-doctor/bio-information/bio-information.component';
+import { DashboardHospitalComponent } from './components/profile/dashboard-hospital/dashboard-hospital.component';
+import { BioInformationHospitalComponent } from './components/profile/dashboard-hospital/bio-information/bio-information.component';
+import { HospitalRegisterComponent } from './components/register/hospital/hospital-register.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 const routes: Routes = [
@@ -21,19 +27,43 @@ const routes: Routes = [
   {
     path: "profile", component: ProfileComponent,
     children: [
-      { path: "", redirectTo: "dashboard", pathMatch: "full" },
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'bio-info', component: BioInformationComponent },
-      { path: 'measurements', component: MeasurementsComponent },
-      { path: 'reports', component: ReportsComponent },
-      { path: 'vaccinations', component: VaccinationsComponent },
-      { path: 'medication', component: MedicationComponent },
-      { path: 'illnesses', component: CriticalIllnessComponent },
+      {path: "", redirectTo: "patient", pathMatch: "full"},
+      {
+        path: "patient",
+        children: [
+          { path: "", redirectTo: "dashboard", pathMatch: "full" },
+          { path: 'dashboard', component: DashboardPatientComponent },
+          { path: 'bio-info', component: BioInformationComponent },
+          { path: 'measurements', component: MeasurementsComponent },
+          { path: 'reports', component: ReportsComponent },
+          { path: 'vaccinations', component: VaccinationsComponent },
+          { path: 'medication', component: MedicationComponent },
+          { path: 'illnesses', component: CriticalIllnessComponent }
+        ]
+      },
+      {
+        path: "doctor", 
+        children: [
+          { path: "", redirectTo: "dashboard", pathMatch: "full" },
+          { path: 'dashboard', component: DashboardDoctorComponent },
+          { path: 'bio-info', component: BioInformationDoctorComponent },
+        ]
+      },
+      {
+        path: "hospital", 
+        children: [
+          { path: "", redirectTo: "dashboard", pathMatch: "full" },
+          { path: 'dashboard', component: DashboardHospitalComponent },
+          { path: 'bio-info', component: BioInformationHospitalComponent },
+        ]
+      },
       { path: 'settings', component: SettingsComponent }
     ]
   },
+  { path: "register", component: RegisterComponent, pathMatch: "full" },
   { path: "register/user", component: UserRegisterComponent, pathMatch: "full" },
   { path: "register/dependant", component: DependantRegisterComponent, pathMatch: "full" },
+  { path: "register/hospital", component: HospitalRegisterComponent, pathMatch: "full" },
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", redirectTo: "/home", pathMatch: "full" }
 ];
