@@ -1,34 +1,10 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-            <img src="http://placehold.it/150x50?text=Logo" alt="">
-          </a>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-</nav>
+<app-header></app-header>
 
 
   <div style="width:60%; margin:0 auto; padding-top: 50px; padding-bottom: 70px;">
     <h1>
-        Registration Form Hospital
+      Hospital Registration Form 
     </h1>
 </div>
 
@@ -37,14 +13,30 @@
         <h5>Login Details (Mandatory)</h5> <br/>
         <div class="form-row">
             <div class="col-md-6 mb-3">
-              <label for="validationServer01">User name</label>
+              <label for="validationServer01">Name</label>
               <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
               <div class="valid-feedback">
                 Looks good!
               </div>
             </div>
             <div class="col-md-6 mb-3">
-              <label for="validationServer02">NIC</label>
+              <label for="validationServer02">Address</label>
+              <input type="textarea" class="form-control is-valid" id="validationServer02" value="Otto" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationServer01">Contact No</label>
+              <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="validationServer02">Fax No</label>
               <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
               <div class="valid-feedback">
                 Looks good!
@@ -53,175 +45,75 @@
           </div>
           <div class="form-row">
             <div class="col-md-6 mb-3">
-              <label for="validationServer01">Email</label>
+              <label for="validationServer01">Hospital Reg No</label>
               <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
               <div class="valid-feedback">
                 Looks good!
               </div>
             </div>
-            <div class="col-md-6 mb-3">
-              <label for="validationServer02">Password</label>
-              <input type="password" class="form-control is-valid" id="validationServer02" value="Otto" required>
-              <div class="valid-feedback">
-                Looks good!
-              </div>
-            </div>
           </div>
-          <div class="form-row">
-            <div class="col-md-6 mb-3">
-                <p>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    Doctor Details >
-                </button>
-                </p>
-                <div class="collapse" id="collapseExample">
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Doctor Identification No/Reg No: </label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Password</label>
-                        <input type="password" class="form-control" id="exampleFormControlInput1">
-                    </div>
-                </div>
-            </div>
-          </div>
-
-          <h5>Personal Details (Mandatory)</h5> <br/>
-
-
-        <div class="form-row">
-          <div class="col-md-3 mb-3">
-            <label for="validationServer01">First name</label>
-            <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationServer02">Middle name</label>
-            <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationServer02">Last name</label>
-            <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
-          </div>
-        </div>
-
         
-
+          <br/> 
+          <h5>Select Components</h5> <br/>
           <div class="form-row">
             <div class="col-md-3 mb-3">
-                <p>Gender</p>
-                <div class="radio">
-                    <label style="margin-right: 10px;">
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                        Male
-                    </label>
-                    <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                        Female
-                    </label>
-                  </div>
+                <div class="gallery-card">
+                    <div class="gallery-card-body">
+                    <label class="block-check">
+                     <img src="https://images.pexels.com/photos/972804/pexels-photo-972804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-responsive" />
+                     <input type="checkbox" >
+                      <span class="checkmark"></span>
+                      </label>
+                       <div class="mycard-footer">
+                         <p> PMIC</p>
+                       </div>
+                    </div>
+                    </div>
             </div>
             <div class="col-md-3 mb-3">
-                <label for="birthday">Date Of Birth:</label><br>
-                <input type="date" id="birthday" name="birthday">
-            </div>
-          </div>
-
-        <div class="form-row">
-          <div class="col-md-6 mb-3">
-            <label for="validationServer03">Address</label>
-            <input type="text" class="form-control is-invalid" id="validationServer03" required>
-
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationServer04">Contact No </label>
-            <input type="number" class="form-control is-invalid" id="validationServer05" required>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationServer05">Country</label>
-            <input type="text" class="form-control is-invalid" id="validationServer05" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-            <div class="col-md-3 mb-3">
-                <label for="validationServer04">Marital Status </label>
-                <select class="custom-select" id="validationServer04" required>
-                  <option selected disabled value="">Choose...</option>
-                  <option>Married</option>
-                  <option>Relationship</option>
-                  <option>other</option>
-                </select>
-            </div>
-
-            <div class="col-md-3 mb-3">
-              <label for="validationServer03">Height (Inches)</label>
-              <input type="text" class="form-control" id="validationServer03" required>
-            </div>
-
-            <div class="col-md-3 mb-3">
-              <label for="validationServer05">Weight (Kg)</label>
-              <input type="text" class="form-control is-invalid" id="validationServer05" required>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="col-md-3 mb-3">
-                <label for="validationServer04">Blood Group </label>
-                <select class="custom-select" id="validationServer04" required>
-                  <option selected disabled value="">Choose...</option>
-                  <option>A+</option>
-                  <option>A-</option>
-                  <option>B+</option>
-                  <option>B-</option>
-                  <option>O+</option>
-                  <option>O-</option>
-                  <option>AB+</option>
-                  <option>AB-</option>
-                </select>
+                <div class="gallery-card">
+                    <div class="gallery-card-body">
+                    <label class="block-check">
+                     <img src="https://images.pexels.com/photos/972804/pexels-photo-972804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-responsive" />
+                     <input type="checkbox" >
+                      <span class="checkmark"></span>
+                      </label>
+                       <div class="mycard-footer">
+                        <p> Analysis</p>
+                        </div>
+                    </div>
+                    </div>
             </div>
             <div class="col-md-3 mb-3">
-              <label for="validationServer05">Occupation</label>
-              <input type="text" class="form-control is-invalid" id="validationServer05" required>
+                <div class="gallery-card">
+                    <div class="gallery-card-body">
+                    <label class="block-check">
+                     <img src="https://images.pexels.com/photos/972804/pexels-photo-972804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-responsive" />
+                     <input type="checkbox" >
+                      <span class="checkmark"></span>
+                      </label>
+                       <div class="mycard-footer">
+                        <p>Drug Management</p>
+                        </div>
+                    </div>
+                    </div>
             </div>
-          </div>
-          <br>
-
-        <h5>Incase Of Emergency (Mandatory)</h5> <br/>
-        <div class="form-row">
-          <div class="col-md-3 mb-3">
-            <label for="validationServer01">Emergency Contact: 
-            </label>
-            <input type="text" class="form-control is-valid" id="validationServer01" value="First/Last Name" required>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationServer02">Relationship</label>
-            <input type="text" class="form-control is-valid" id="validationServer02" required>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationServer02">Contact No</label>
-            <input type="number" class="form-control is-valid" id="validationServer02" required>
-          </div>
-        </div>
-        <br/>
-        <h5>Medical History (Mandatory)</h5> <br/>
-        <p>Check the conditions that apply to you or to any members of your immediate relatives: * (Tick the Relative check box if applicable)</p>
-        <div class="form-row">
-            <div class="input-group col-md-6 mb-3">
-                  <div class="input-group-text">
-                      <label style="margin-right: 10px;">
-                        <input type="checkbox" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                        Asthma 
-                    </label>                 
-                  </div>
-                  <div class="input-group-text">
-                    <label style="margin-right: 10px;">
-                        <input type="checkbox" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                        Cancer 
-                    </label>                 
-                  </div>
-              </div>
-          </div>
+            <div class="col-md-3 mb-3">
+                <div class="gallery-card">
+                    <div class="gallery-card-body">
+                    <label class="block-check">
+                     <img src="https://images.pexels.com/photos/972804/pexels-photo-972804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-responsive" />
+                     <input type="checkbox" >
+                      <span class="checkmark"></span>
+                      </label>
+                       <div class="mycard-footer">
+                        <p>Other</p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+          </div>  
+          
         <br>
         <br>
         <h5>User Agreement</h5> <br/>
@@ -250,51 +142,4 @@
       </form>
 </div>
 
-<footer class="footer-bs">
-    <div class="row">
-      <div class="col-md-3 footer-brand animated fadeInLeft">
-          <h2>Logo</h2>
-            <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
-            <p>© 2014 BS3 UI Kit, All rights reserved</p>
-        </div>
-      <div class="col-md-4 footer-nav animated fadeInUp">
-          <h4>Menu —</h4>
-          <div class="col-md-6">
-                <ul class="pages">
-                    <li><a href="#">Travel</a></li>
-                    <li><a href="#">Nature</a></li>
-                    <li><a href="#">Explores</a></li>
-                    <li><a href="#">Science</a></li>
-                    <li><a href="#">Advice</a></li>
-                </ul>
-            </div>
-          <div class="col-md-6">
-                <ul class="list">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contacts</a></li>
-                    <li><a href="#">Terms & Condition</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-        </div>
-      <div class="col-md-2 footer-social animated fadeInDown">
-          <h4>Follow Us</h4>
-          <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">RSS</a></li>
-            </ul>
-        </div>
-      <div class="col-md-3 footer-ns animated fadeInRight">
-          <h4>Newsletter</h4>
-            <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins</p>
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search for...">
-                  <span class="input-group-btn">
-                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
-                  </span>
-                </div><!-- /input-group -->
-        </div>
-    </div>
-</footer>
+<app-footer></app-footer>

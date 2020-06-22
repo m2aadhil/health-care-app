@@ -1,6 +1,7 @@
+/*
 .container {
     max-width: 960px;
-  } 
+  }*/ 
 .site-header {
     background-color: rgba(0, 0, 0, .85);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -65,8 +66,8 @@
 	color: rgba(255,255,255,1.00);
 	border-bottom-right-radius: 6px;
 	border-top-left-radius: 0px;
-    border-bottom-left-radius: 6px;
-    margin-top: 300px;
+  border-bottom-left-radius: 6px;
+  
 }
 .footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
 .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
@@ -148,6 +149,12 @@ https://bootstrapious.com/p/admin-template
 */
 body {
     overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: rgb(141, 94, 94);
   }
   
   a,
@@ -167,9 +174,7 @@ body {
     text-decoration: none;
   }
   
-  section {
-    padding: 50px 0;
-  }
+
   
   canvas {
     -webkit-user-select: none;
@@ -177,6 +182,8 @@ body {
     -ms-user-select: none;
     user-select: none;
   }
+
+  /*
   
   .container-fluid {
     padding: 0 30px;
@@ -184,13 +191,12 @@ body {
   
   @media (max-width: 575px) {
     .container-fluid {
-      padding: 0 15px;
+      padding: 0 0px;
     }
   }
+  */
   
-  header.page-header {
-    padding: 20px 0;
-  }
+ 
   
   table, .table {
     font-size: 0.9em;
@@ -240,21 +246,24 @@ body {
   .content-inner {
     position: relative;
     width: calc(100% - 250px);
-    min-height: calc(100vh - 70px);
-    padding-bottom: 60px;
+    min-height: calc(100vh);  
   }
   
   .content-inner.active {
     width: calc(100% - 90px);
   }
   
+  /* Navigation Pane */
+  
   .page-header {
-    background: #fff;
+    /*background: rgb(16, 51, 29);*/
     padding: 20px;
     -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 8;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
   }
   
   *[class*="icon-"] {
@@ -444,7 +453,8 @@ body {
   }
   
   .page {
-    background: #EEF5F9;
+    background: #ffffff;
+    overflow-x: hidden;
   }
   
   .page .text-white {
@@ -475,9 +485,7 @@ body {
     margin-top: 0 !important;
   }
   
-  .page {
-    overflow-x: hidden;
-  }
+
   
   .has-shadow {
     -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), -1px 0 2px rgba(0, 0, 0, 0.05);
@@ -521,10 +529,10 @@ body {
   * ==========================================================
   */
   nav.side-navbar {
-    background: #fff;
+    background: rgb(7, 80, 80);
     min-width: 250px;
     max-width: 250px;
-    color: #686a76;
+    color: #131418;
     -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     z-index: 9;
@@ -533,10 +541,21 @@ body {
     /*==== Shrinked Sidebar ====*/
   }
   
-  nav.side-navbar a {
-    color: inherit;
+
+  nav.side-navbar .static-li { 
+    color: white;
     position: relative;
     font-size: 0.9em;
+    margin-bottom: 2px;
+    padding: 10px;
+    background-color: rgb(10, 59, 45);
+  }
+
+
+  nav.side-navbar a {
+    color: white;
+    position: relative;
+    font-size: 0.9em;    
   }
   
   nav.side-navbar a[data-toggle="collapse"]::before {
@@ -618,8 +637,7 @@ body {
   }
   
   nav.side-navbar ul li a:hover {
-    background: #796AEE;
-    border-left: 4px solid #3b25e6;
+    background: #4cdbdb;
     color: #fff;
   }
   
@@ -629,17 +647,16 @@ body {
   }
   
   nav.side-navbar ul li.active > a {
-    background: #796AEE;
+    background: #028383;
     color: #fff;
-    border-left: 4px solid #3b25e6;
   }
   
   nav.side-navbar ul li.active > a:hover {
-    background: #796AEE;
+    background: #4cdbdb;
   }
   
   nav.side-navbar ul li li.active > a {
-    background: #8e81f1;
+    background: #4cdbdb;
   }
   
   nav.side-navbar ul li ul {
@@ -788,7 +805,7 @@ body {
   * ==========================================================
   */
   nav.navbar {
-    background: #2f333e;
+    background: #2fbba4;
     padding-top: 15px;
     padding-bottom: 15px;
     color: #fff;
@@ -1126,13 +1143,13 @@ body {
   }
   
   section.dashboard-counts .row {
-    padding: 30px 15px;
+    padding: 0px 0px;
     margin: 0;
   }
   
   section.dashboard-counts div[class*='col-'] .item {
     border-right: 1px solid #eee;
-    padding: 15px 0;
+    padding: 5px 0;
   }
   
   section.dashboard-counts div[class*='col-']:last-of-type .item {
@@ -2934,15 +2951,7 @@ body {
   /*
    * 3. TYPE  
    */
-  body {
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-  }
-  
+ 
   a {
     color: #796AEE;
     text-decoration: none;
@@ -3888,14 +3897,12 @@ left: -10px;
 
 
 
-
+.container .container-common-dash{
+  max-width: 100%;
+}
 
 
 .emp-profile{
-  padding: 3%;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  border-radius: 0.5rem;
   background: #fff;
 }
 .profile-img{
@@ -4054,3 +4061,116 @@ left: -10px;
 }
 
 
+/* Banner Page CSS */
+
+.card-img-top {
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+}
+
+
+
+/*Registration Components*/
+
+
+/*--choice modal1--*/
+
+
+
+.gallery-card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  height: 200px;
+  margin-bottom:14px;
+}
+.gallery-card-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  /*padding: 1.25rem;*/
+}
+.gallery-card img {
+  height: 180px;
+  width: 100%;
+}
+
+/*--checkbox--*/
+
+.block-check {
+  display: block;
+  position: relative;
+ 
+ 
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.block-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+cursor: pointer;
+}
+
+/* On mouse-over, add a grey background color */
+.block-check:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.block-check input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.block-check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.block-check .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

@@ -2,7 +2,7 @@
 <div class="page">
   <!-- Main Navbar-->
   <header class="header">
-    <nav class="navbar navbar-expand navbar-light bg-black topbar mb-4 static-top">
+    <nav class="navbar navbar-expand navbar-light bg-black topbar static-top">
       <!-- Topbar Navbar -->
       <ul class="navbar-nav ml-auto">
 
@@ -35,7 +35,7 @@
         <li class="nav-item dropdown no-arrow">
           <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline text-white-600 small">Valerie Luna</span>
+            <span class="mr-2 d-none d-lg-inline text-white-600 large">Admin User</span>
             <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
           </a>
           <!-- Dropdown - User Information -->
@@ -67,12 +67,16 @@
     <nav class="side-navbar">
       <!-- Sidebar Header-->
       <div class="sidebar-header d-flex align-items-center">
-        <div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-        <div class="title">
-          <h1 class="h4">iCare</h1>
-        </div>
+        <!-- <div class="title">
+          <h1 class="h4" style="color: white;">iCare</h1>
+        </div>-->
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
       </div>
       <ul class="list-unstyled">
+        <li class="static-li">  My Anamnesis  </li>
         <li class="active"><a [routerLink]="'../' + routerLink + 'dashboard'"><i class="icon-home"></i>Dashboard</a></li>
         <li><a [routerLink]="'settings'"> <i class="fa fa-bar-chart"></i>Settings </a></li>
       </ul>
@@ -81,7 +85,7 @@
       <!-- Page Header-->
       <header class="page-header">
         <div class="container-fluid">
-          <h2 class="no-margin-bottom">Dashboard</h2>
+          <h4 class="no-margin-bottom">Dashboard</h4> <span> Navigation pane </span>
         </div>
       </header>
       <!-- Dashboard Counts Section-->
@@ -94,4 +98,3 @@
     </div>
   </div>
 </div>
-<app-footer></app-footer>
