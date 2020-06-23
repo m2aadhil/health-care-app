@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,7 +12,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { BioInformationComponent } from './components/profile/dashboard-patient/bio-information/bio-information.component';
 import { MeasurementsComponent } from './components/profile/dashboard-patient/measurements/measurements.component';
 import { DependantRegisterComponent } from './components/register/dependant/dependant-register.component';
-import { UserRegisterComponent } from './components/register/patient-doctor/user-register.component';
+import { UserRegisterComponent } from './components/register/patient/user-register.component';
 import { SettingsComponent } from './components/profile/settings/settings.component';
 import { AppStateService } from './services/app-state.service';
 import { NewsFeedComponent } from './components/news-feed/news-feed.component';
@@ -31,6 +30,11 @@ import { DashboardHospitalComponent } from './components/profile/dashboard-hospi
 import { DashboardPatientComponent } from './components/profile/dashboard-patient/dashboard-patient.component';
 import { BioInformationDoctorComponent } from './components/profile/dashboard-doctor/bio-information/bio-information.component';
 import { BioInformationHospitalComponent } from './components/profile/dashboard-hospital/bio-information/bio-information.component';
+import { DoctorRegisterComponent } from './components/register/doctor/doctor-register.component';
+import { DoctorPmicComponent } from './components/profile/dashboard-doctor/doctor-pmic/doctor-pmic.component';
+import { DoctorDrugsComponent } from './components/profile/dashboard-doctor/doctor-drugs/doctor-drugs.component';
+import { DoctorPrescriptionComponent } from './components/profile/dashboard-doctor/doctor-prescription/doctor-prescription.component';
+import { UserManagementComponent } from './components/profile/dashboard-doctor/user-management/user-management.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +62,12 @@ import { BioInformationHospitalComponent } from './components/profile/dashboard-
     ReportsComponent,
     VaccinationsComponent,
     MedicationComponent,
-    CriticalIllnessComponent
+    CriticalIllnessComponent,
+    DoctorRegisterComponent,
+    DoctorPmicComponent,
+    DoctorDrugsComponent,
+    DoctorPrescriptionComponent,
+    UserManagementComponent
   ],
   imports: [
     BrowserModule,

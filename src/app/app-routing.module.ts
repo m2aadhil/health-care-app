@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './components/profile/profile.component';
 import { BioInformationComponent } from './components/profile/dashboard-patient/bio-information/bio-information.component';
 import { MeasurementsComponent } from './components/profile/dashboard-patient/measurements/measurements.component';
-import { UserRegisterComponent } from './components/register/patient-doctor/user-register.component';
 import { DependantRegisterComponent } from './components/register/dependant/dependant-register.component';
 import { SettingsComponent } from './components/profile/settings/settings.component';
 import { HomeComponent } from './components/home/home.component';
@@ -18,6 +17,12 @@ import { DashboardHospitalComponent } from './components/profile/dashboard-hospi
 import { BioInformationHospitalComponent } from './components/profile/dashboard-hospital/bio-information/bio-information.component';
 import { HospitalRegisterComponent } from './components/register/hospital/hospital-register.component';
 import { RegisterComponent } from './components/register/register.component';
+import { DoctorRegisterComponent } from './components/register/doctor/doctor-register.component';
+import { UserRegisterComponent } from './components/register/patient/user-register.component';
+import { DoctorPmicComponent } from './components/profile/dashboard-doctor/doctor-pmic/doctor-pmic.component';
+import { DoctorDrugsComponent } from './components/profile/dashboard-doctor/doctor-drugs/doctor-drugs.component';
+import { DoctorPrescriptionComponent } from './components/profile/dashboard-doctor/doctor-prescription/doctor-prescription.component';
+import { UserManagementComponent } from './components/profile/dashboard-doctor/user-management/user-management.component';
 
 
 const routes: Routes = [
@@ -47,6 +52,10 @@ const routes: Routes = [
           { path: "", redirectTo: "dashboard", pathMatch: "full" },
           { path: 'dashboard', component: DashboardDoctorComponent },
           { path: 'bio-info', component: BioInformationDoctorComponent },
+          { path: 'pmic', component: DoctorPmicComponent },
+          { path: 'drugs', component: DoctorDrugsComponent },
+          { path: 'prescription', component: DoctorPrescriptionComponent },
+          { path: 'user-management', component: UserManagementComponent }
         ]
       },
       {
@@ -62,7 +71,7 @@ const routes: Routes = [
   },
   { path: "register", component: RegisterComponent, pathMatch: "full" },
   { path: "register/user", component: UserRegisterComponent, pathMatch: "full" },
-  { path: "register/dependant", component: DependantRegisterComponent, pathMatch: "full" },
+  { path: "register/doctor", component: DoctorRegisterComponent, pathMatch: "full" },
   { path: "register/hospital", component: HospitalRegisterComponent, pathMatch: "full" },
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", redirectTo: "/home", pathMatch: "full" }
